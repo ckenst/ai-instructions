@@ -1,0 +1,12 @@
+# Mailinator API Examples – Agent Guide
+- **Scope**: Node.js scripts that demonstrate Mailinator REST usage plus a minimal smoke-test harness; treat every call as a live API hit.
+- **Layout**: Examples live under `examples/simple` (single-call scripts) and will expand into `examples/workflows` for chained scenarios; endpoint smoke tests sit in `tests/` with shared helpers in `tests/utils`.
+- **HTTP conventions**: Axios calls always send `Authorization: Bearer <token>` and respect `BASE_URL = https://api.mailinator.com/api/v2`; mirror the optional query params pattern in `tests/fetchInboxMessages.test.js` (validate numbers, only pass defined params).
+- **Timeouts**: The shared `fetchInboxMessages` helper applies a `timeout: 10000` on Axios requests—reuse this default when adding new Mailinator calls to avoid hanging test runs.
+- **Debugging outbound requests**: Use `enableAxiosDebugLogging` from `tests/utils/axiosDebug.js` to inspect composed requests; activate by uncommenting the interceptor setup and capture logs with the provided `label` option.
+- **Endpoint tests**: `npm test` runs `tests/runEndpointTests.js`, which manually orchestrates async test functions and stops on first failure; integrate new checks by exporting a function in `fetchInboxMessages.test.js` (or a sibling module) and adding it to the `tests` array with a clear display name.
+- **Assertion style**: Tests rely on Node's built-in `assert`; favor explicit messages that mention the offending field (`message.domain`, `message.to`) as done in current checks.
+- **Inbox expectations**: Smoke tests assume `MAILINATOR_RESPONSE_DOMAIN` matches the messages returned for domain-wide calls and that `MAILINATOR_INBOX` actually contains mail; guard new assertions so they fail fast when inbox env vars are missing.
+- **Dependency management**: `package.json` keeps dependencies minimal (`axios`, `dotenv`, `mailinator-client`); prefer matching versions unless a Mailinator API change forces an upgrade.
+- **CI friendliness**: Avoid adding brittle timing assumptions—the API is queried live, so sleep/retry logic should be opt-in and guarded by env flags if ever introduced.
+- **Commit hygiene**: Do not check in real API tokens or inbox names; ensure placeholder values remain generic in committed code.
