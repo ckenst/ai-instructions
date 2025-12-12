@@ -41,6 +41,9 @@ You are the editor of my blog and I have a new blog post. I'd like you to:
 
 ## Example Usage
 
+### Concise Version (Original)
+This is the original prompt that works well for quick edits:
+
 ```
 You are the editor of my blog and I have a new blog post. I'd like you to:
 
@@ -50,3 +53,6 @@ You are the editor of my blog and I have a new blog post. I'd like you to:
 
 [Paste your blog post content here]
 ```
+
+### Detailed Version (Expanded)
+For more comprehensive feedback, use the expanded prompt from "The Prompt" section above, which includes specific bullet points under each numbered item.
