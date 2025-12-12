@@ -5,9 +5,9 @@ Purpose
 - A reusable prompt you can reference in GitHub Copilot Chat to generate single-file, beginner-friendly Mailinator JavaScript demo scripts for the docs.
 
 How to use (quick)
-1. Save this file in your repository at docs/prompts/mailinator-copilot-prompt.md
+1. Reference this file from your repository at prompts/code-examples-copilot.md
 2. Open GitHub Copilot Chat in VS Code and enable workspace/repository context (see instructions below).
-3. In the chat input say: "Follow the rules in docs/prompts/mailinator-copilot-prompt.md and generate a single-file JavaScript demo that <short description>. Name the file <file-name.js>."
+3. In the chat input say: "Follow the rules in prompts/code-examples-copilot.md and generate a single-file JavaScript demo that <short description>. Name the file <file-name.js>."
 
 Audience & Style
 - Audience: absolute beginners. Short, plain-language comments and step-by-step explanations.
@@ -31,8 +31,8 @@ Request template (example)
   "Generate a single-file JavaScript demo that <short description>. Name the file <suggested-filename.js> and keep it under ~80 lines."
 
 Example usage in Copilot Chat
-- "Follow the rules in docs/prompts/mailinator-copilot-prompt.md and generate a single-file JavaScript demo that lists the 5 most recent messages in a Mailinator inbox. Name the file list-inbox-demo.js."
+- "Follow the rules in prompts/code-examples-copilot.md and generate a single-file JavaScript demo that lists the 5 most recent messages in a Mailinator inbox. Name the file list-inbox-demo.js."
 
 Notes
-- If you want Copilot to read this file automatically, ensure Copilot Chat's workspace/repo context is enabled. If that is unavailable, use the snippet approach below to quickly paste the prompt into Copilot Chat.
+- If you want Copilot to read this file automatically, ensure Copilot Chat's workspace/repo context is enabled.
 ```
