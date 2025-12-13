@@ -1,4 +1,3 @@
-```markdown
 # Mailinator Copilot Prompt — Quick Template for generating beginner-friendly code samples
 
 Purpose
@@ -35,4 +34,4 @@ Example usage in Copilot Chat
 
 Notes
 - If you want Copilot to read this file automatically, ensure Copilot Chat's workspace/repo context is enabled.
-```
+
