@@ -50,6 +50,7 @@ You are the editor of my blog and I have a new blog post. I'd like you to:
 1. Check all grammar and sentence structure. Identify all issues.
 2. Check for readability. The sentences should flow and be readable. Nothing too long.
 3. Try to understand what I'm saying and then give suggestions on how to improve, keeping my writing voice.
+4. Do not re-write the article.
 
 [Paste your blog post content here]
 ```
